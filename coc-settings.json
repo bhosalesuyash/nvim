@@ -9,6 +9,7 @@
     "json",
     "javascriptreact"
   ],
+  "prettier.singleQuote": true,
   "eslint.probe": ["javascript", "javascriptreact", "css", "html"],
   "diagnostic.errorSign": "•",
   "diagnostic.warningSign": "•",
