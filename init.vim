@@ -48,6 +48,14 @@ let g:coc_global_extensions = [
 "----------------------------
 vmap <C-a> <Plug>(coc-codeaction-selected)
 nmap <C-a> <Plug>(coc-codeaction-selected)
+"---------------------------
+"-Default KeyBinfing Remap--
+"---------------------------
+nnoremap <C-b> :bn<CR>
+nnoremap <C-p> :bp<CR>
+nnoremap <C-d> :bd<CR>
+nnoremap <C-q> :q<CR>
+nnoremap <C-w> :w<CR>
 
 "----------------------------
 "------Theme Setting---------
