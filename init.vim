@@ -29,6 +29,7 @@ Plug 'arthurxavierx/vim-caser'
 Plug 'yuezk/vim-js'
 Plug 'cocopon/iceberg.vim' 
 Plug 'https://github.com/sirver/UltiSnips'
+Plug 'https://github.com/tpope/vim-fugitive'
 call plug#end()
 
 let g:coc_global_extensions = [
@@ -47,11 +48,11 @@ let g:coc_global_extensions = [
 "--------Spell Check---------
 "----------------------------
 vmap <C-a> <Plug>(coc-codeaction-selected)
-nmap <C-a> <Plug>(coc-codeaction-selected)
+nma <C-a> <Plug>(coc-codeaction-selected)
 "---------------------------
 "-Default KeyBinfing Remap--
 "---------------------------
-nnoremap <C-b> :bn<CR>
+nnoremap <C-o> :bn<CR>
 nnoremap <C-p> :bp<CR>
 nnoremap <C-d> :bd<CR>
 nnoremap <C-q> :q<CR>
