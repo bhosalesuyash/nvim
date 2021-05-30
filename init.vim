@@ -30,6 +30,7 @@ Plug 'yuezk/vim-js'
 Plug 'cocopon/iceberg.vim' 
 Plug 'https://github.com/sirver/UltiSnips'
 Plug 'https://github.com/tpope/vim-fugitive'
+"Plug 'jmckiern/vim-shoot', { 'do': '\"./install.py\" geckodriver' }
 call plug#end()
 
 let g:coc_global_extensions = [
