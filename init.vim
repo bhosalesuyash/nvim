@@ -30,7 +30,7 @@ Plug 'yuezk/vim-js'
 Plug 'cocopon/iceberg.vim' 
 Plug 'https://github.com/sirver/UltiSnips'
 Plug 'https://github.com/tpope/vim-fugitive'
-"Plug  'vim-scripts/ScreenShot' 
+Plug 'wojciechkepka/bogster'
 call plug#end()
 
 let g:coc_global_extensions = [
@@ -53,11 +53,9 @@ nma <C-a> <Plug>(coc-codeaction-selected)
 "---------------------------
 "-Default KeyBinfing Remap--
 "---------------------------
-nnoremap <C-o> :bn<CR>
-nnoremap <C-p> :bp<CR>
+nnoremap <C-Right> :bn<CR>
+nnoremap <C-Left> :bp<CR>
 nnoremap <C-d> :bd<CR>
-nnoremap <C-q> :q<CR>
-nnoremap <C-w> :w<CR>
 
 "----------------------------
 "------Theme Setting---------
@@ -65,8 +63,8 @@ nnoremap <C-w> :w<CR>
 if (has("termguicolors"))
  set termguicolors
 endif
-colorscheme iceberg
-let g:airline_theme = 'iceberg'
+colorscheme bogster
+let g:airline_theme = 'bogster'
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_powerline_fonts = 1
 
