@@ -31,6 +31,7 @@ Plug 'cocopon/iceberg.vim'
 Plug 'https://github.com/sirver/UltiSnips'
 Plug 'https://github.com/tpope/vim-fugitive'
 Plug 'wojciechkepka/bogster'
+"Plug 'ayu-theme/ayu-vim'
 call plug#end()
 
 let g:coc_global_extensions = [
@@ -65,7 +66,7 @@ if (has("termguicolors"))
 endif
 colorscheme bogster
 let g:airline_theme = 'bogster'
-let g:airline#extensions#tabline#enabled = 1
+"let g:airline#extensions#tabline#enabled = 1
 let g:airline_powerline_fonts = 1
 
 "----------------------------------
