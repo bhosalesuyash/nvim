@@ -30,6 +30,7 @@ Plug 'cocopon/iceberg.vim'
 Plug 'https://github.com/sirver/UltiSnips'
 Plug 'https://github.com/tpope/vim-fugitive'
 Plug 'https://github.com/mhinz/vim-startify'
+Plug 'https://github.com/wojciechkepka/bogster'
 call plug#end()
 
 let g:coc_global_extensions = [
@@ -62,10 +63,7 @@ nnoremap <C-d> :bd<CR>
 if (has("termguicolors"))
  set termguicolors
 endif
-colorscheme iceberg
-let g:airline_theme = 'iceberg'
-"let g:airline#extensions#tabline#enabled = 1
-let g:airline_powerline_fonts = 1
+colorscheme bogster
 
 "----------------------------------
 "--------Vim Closing tag-----------
