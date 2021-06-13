@@ -16,7 +16,6 @@ set scrolloff=10
 "-----------------------------
 
 call plug#begin('~/.vim/plugged')
-Plug 'vim-airline/vim-airline'
 Plug 'neoclide/coc.nvim' 
 Plug 'https://github.com/alvan/vim-closetag'
 Plug 'tpope/vim-surround'
@@ -30,8 +29,7 @@ Plug 'yuezk/vim-js'
 Plug 'cocopon/iceberg.vim' 
 Plug 'https://github.com/sirver/UltiSnips'
 Plug 'https://github.com/tpope/vim-fugitive'
-Plug 'wojciechkepka/bogster'
-"Plug 'ayu-theme/ayu-vim'
+Plug 'https://github.com/mhinz/vim-startify'
 call plug#end()
 
 let g:coc_global_extensions = [
@@ -45,7 +43,7 @@ let g:coc_global_extensions = [
   \ 'coc-css', 
   \ 'coc-html', 
   \ 'coc-spell-checker', 
-  \ ]
+  \ ]  
 "----------------------------
 "--------Spell Check---------
 "----------------------------
@@ -64,8 +62,8 @@ nnoremap <C-d> :bd<CR>
 if (has("termguicolors"))
  set termguicolors
 endif
-colorscheme bogster
-let g:airline_theme = 'bogster'
+colorscheme iceberg
+let g:airline_theme = 'iceberg'
 "let g:airline#extensions#tabline#enabled = 1
 let g:airline_powerline_fonts = 1
 
@@ -73,54 +71,22 @@ let g:airline_powerline_fonts = 1
 "--------Vim Closing tag-----------
 "----------------------------------
 
-" filenames like *.xml, *.html, *.xhtml, ...
-" These are the file extensions where this plugin is enabled.
-"
 let g:closetag_filenames = '*.html,*.xhtml,*.phtml,*.js,*.json'
-
-" filenames like *.xml, *.xhtml, ...
-" This will make the list of non-closing tags self-closing in the specified files.
-"
 let g:closetag_xhtml_filenames = '*.xhtml,*.jsx,*.js,*.json'
-
-" filetypes like xml, html, xhtml, ...
-" These are the file types where this plugin is enabled.
-"
 let g:closetag_filetypes = 'html,xhtml,phtml,js,json,jsx'
-
-" filetypes like xml, xhtml, ...
-" This will make the list of non-closing tags self-closing in the specified files.
-"
 let g:closetag_xhtml_filetypes = 'xhtml,jsx,js,json'
-
-" integer value [0|1]
-" This will make the list of non-closing tags case-sensitive (e.g. `<Link>` will be closed while `<link>` won't.)
-"
 let g:closetag_emptyTags_caseSensitive = 1
-
-" dict
-" Disables auto-close if not in a "valid" region (based on filetype)
-"
 let g:closetag_regions = {
     \ 'typescript.tsx': 'jsxRegion,tsxRegion',
     \ 'javascript.jsx': 'jsxRegion',
     \ 'typescriptreact': 'jsxRegion,tsxRegion',
     \ 'javascriptreact': 'jsxRegion',
     \ }
-
-" Shortcut for closing tags, default is '>'
-"
 let g:closetag_shortcut = '>'
-
-" Add > at current position without closing the current tag, default is ''
-"
 let g:closetag_close_shortcut = '<leader>>'
-
-
 " .............................................................................
 " lambdalisue/fern.vim
 " .............................................................................
-
 " Disable netrw.
 let g:loaded_netrw  = 1
 let g:loaded_netrwPlugin = 1
@@ -173,3 +139,32 @@ augroup FernGroup
   autocmd!
   autocmd FileType fern call FernInit()
 augroup END
+"---------------------------------------------
+"---------Startyfy----------------------------
+"---------------------------------------------
+let g:startify_session_dir = '~/.config/nvim/session'
+let g:startify_lists = [
+          \ { 'type': 'files',     'header': ['   Files']            },
+          \ { 'type': 'dir',       'header': ['   Current Directory '. getcwd()] },
+          \ { 'type': 'sessions',  'header': ['   Sessions']       },
+          \ { 'type': 'bookmarks', 'header': ['   Bookmarks']      },
+          \ ]
+let g:startify_bookmarks = [
+            \ { 'i': '~/.config/nvim/init.vim' },
+            \ { 'z': '~/.zshrc' },
+            \ ]
+let g:startify_session_autoload = 1
+let g:startify_session_delete_buffers = 1
+let g:startify_change_to_vcs_root = 1
+let g:startify_fortune_use_unicode = 1
+let g:startify_session_persistence = 1
+let g:startify_enable_special = 0
+let g:startify_custom_header = [
+               \'   ___  _____ _____  _   __ ___________ ',
+               \'  |_  ||  _  /  __ \| | / /|  ___| ___ \',
+               \'    | || | | | /  \/| |/ / | |__ | |_/ /',
+               \'    | || | | | |    |    \ |  __||    / ',
+               \'/\__/ /\ \_/ / \__/\| |\  \| |___| |\ \ ',
+               \'\____/  \___/ \____/\_| \_/\____/\_| \_|',
+        \]
+
