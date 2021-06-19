@@ -7,6 +7,7 @@ set noerrorbells
 set tabstop=4 softtabstop=4
 set shiftwidth=4
 set noswapfile
+set nohlsearch
 set incsearch
 set expandtab
 set smartindent
@@ -21,6 +22,7 @@ Plug 'https://github.com/alvan/vim-closetag'
 Plug 'tpope/vim-surround'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
+Plug 'https://github.com/nightsense/cosmic_latte'
 Plug 'lambdalisue/fern.vim'
 Plug 'metakirby5/codi.vim'
 Plug 'mattn/emmet-vim'
@@ -30,7 +32,7 @@ Plug 'cocopon/iceberg.vim'
 Plug 'https://github.com/sirver/UltiSnips'
 Plug 'https://github.com/tpope/vim-fugitive'
 Plug 'https://github.com/mhinz/vim-startify'
-Plug 'https://github.com/wojciechkepka/bogster'
+Plug 'https://github.com/RohanPoojary/pleasant.vim'
 call plug#end()
 
 let g:coc_global_extensions = [
@@ -63,7 +65,8 @@ nnoremap <C-d> :bd<CR>
 if (has("termguicolors"))
  set termguicolors
 endif
-colorscheme bogster
+set background=dark
+colorscheme pleasant
 
 "----------------------------------
 "--------Vim Closing tag-----------
