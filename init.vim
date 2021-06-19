@@ -22,17 +22,16 @@ Plug 'https://github.com/alvan/vim-closetag'
 Plug 'tpope/vim-surround'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
-Plug 'https://github.com/nightsense/cosmic_latte'
 Plug 'lambdalisue/fern.vim'
 Plug 'metakirby5/codi.vim'
 Plug 'mattn/emmet-vim'
 Plug 'arthurxavierx/vim-caser'
 Plug 'yuezk/vim-js'
-Plug 'cocopon/iceberg.vim' 
 Plug 'https://github.com/sirver/UltiSnips'
 Plug 'https://github.com/tpope/vim-fugitive'
 Plug 'https://github.com/mhinz/vim-startify'
 Plug 'https://github.com/RohanPoojary/pleasant.vim'
+Plug 'https://github.com/unblevable/quick-scope'
 call plug#end()
 
 let g:coc_global_extensions = [
@@ -53,7 +52,7 @@ let g:coc_global_extensions = [
 vmap <C-a> <Plug>(coc-codeaction-selected)
 nma <C-a> <Plug>(coc-codeaction-selected)
 "---------------------------
-"-Default KeyBinfing Remap--
+"-Default KeyBinding Remap--
 "---------------------------
 nnoremap <C-Right> :bn<CR>
 nnoremap <C-Left> :bp<CR>
